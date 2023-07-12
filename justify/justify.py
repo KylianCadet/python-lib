@@ -27,7 +27,7 @@ def justify(text: str, justify_len: int) -> list[str]:
             break
 
         for i in range(spaces_to_add + 1):
-            words_line[i % (len(words_line) - 1)] += ' '
+            words_line[i % (len(words_line) - 1 or 1)] += ' '
 
         result.append(' '.join(words_line))
 
